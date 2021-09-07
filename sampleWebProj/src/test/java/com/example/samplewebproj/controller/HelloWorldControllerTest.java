@@ -32,7 +32,7 @@ public class HelloWorldControllerTest {
 //		this.mockMvc.perform(get("/hello")).andDo(print()).andExpect(status().isOk())
 //		.andExpect(content().string(containsString("Hello Jafar V5")));
 		String response = hwc.hello();
-		assertEquals("Hello Jafar v5", response);
+		assertEquals("Hello Jafar V5", response);
 		
 		
 	}
