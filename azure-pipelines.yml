@@ -44,6 +44,12 @@ stages:
 
     - upload: $(Build.ArtifactStagingDirectory)
       artifact: drop
+      
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: '**/TEST-*.xml'
+
 
 - stage: Deploy
   displayName: Deploy stage
